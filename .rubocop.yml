@@ -42,10 +42,6 @@ Layout/MultilineMethodArgumentLineBreaks:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: same_line
 
-Lint/RescueException:
-  Exclude:
-    - lib/debugger.rb
-
 Metrics/AbcSize:
   Enabled: false
 
@@ -69,10 +65,6 @@ Metrics/PerceivedComplexity:
 
 Naming/FileName:
   Enabled: false
-
-Security/Eval:
-  Exclude:
-    - lib/debugger.rb
 
 Style/BlockDelimiters:
   EnforcedStyle: always_braces
