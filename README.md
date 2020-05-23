@@ -7,7 +7,7 @@ My core ruby libs.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'core', git: 'https://github.com/jubishop/core'
+gem 'core', github: 'jubishop/core'
 ```
 
 And then execute:
