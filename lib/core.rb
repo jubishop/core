@@ -1,2 +1,2 @@
-require 'debugger.rb'
-require 'Proc.rb'
+require_relative 'debugger'
+require_relative 'proc'
