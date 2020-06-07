@@ -10,42 +10,23 @@ class Numeric
   public_constant :HOURS
   public_constant :DAYS
 
+  TIME_NAMES = {
+    DAYS => 'day',
+    HOURS => 'hour',
+    MINUTES => 'minute',
+    SECONDS => 'second',
+    MILLISECONDS => 'millisecond'
+  }.freeze
+  private_constant :TIME_NAMES
+
   def duration(units: SECONDS, precision: SECONDS)
     remaining = Rational(self * units)
-    days = (remaining / DAYS).to_i
-    remaining -= days * DAYS
-    hours = (remaining / HOURS).to_i
-    remaining -= hours * HOURS
-    minutes = (remaining / MINUTES).to_i
-    remaining -= minutes * MINUTES
-    seconds = (remaining / SECONDS).to_i
-    remaining -= seconds * SECONDS
-    milliseconds = (remaining / MILLISECONDS).to_i
-
-    parts = []
-    parts.push(pluralize('day', days)) if days >= 1
-    parts.push(pluralize('hour', hours)) if hours >= 1 && HOURS >= precision
-    if minutes >= 1 && MINUTES >= precision
-      parts.push(pluralize('minute', minutes))
-    end
-    if seconds >= 1 && SECONDS >= precision
-      parts.push(pluralize('second', seconds))
-    end
-    if milliseconds >= 1 && MILLISECONDS >= precision
-      parts.push(pluralize('millisecond', milliseconds))
-    end
-
-    if parts.empty?
-      null_answers = {
-        MILLISECONDS => '0 milliseconds',
-        SECONDS => '0 seconds',
-        MINUTES => '0 minutes',
-        HOURS => '0 hours',
-        DAYS => '0 days'
-      }
-      return null_answers.fetch(precision)
-    end
-
+    parts = TIME_NAMES.filter_map { |amount, name|
+      value = (remaining / amount).to_i
+      remaining -= value * amount
+      pluralize(name, value) if value >= 1 && amount >= precision
+    }
+    parts.push(pluralize(TIME_NAMES.fetch(precision), 0)) if parts.empty?
     return build_sentence(parts)
   end
 
