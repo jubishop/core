@@ -42,6 +42,9 @@ Layout/MultilineMethodArgumentLineBreaks:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: same_line
 
+Lint/NumberConversion:
+  Enabled: false
+
 Metrics/AbcSize:
   Enabled: false
 

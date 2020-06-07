@@ -1,6 +1,6 @@
 module JubiSingleton
   def self.included(base)
-    base.extend ClassMethods
+    base.extend(ClassMethods)
   end
 
   module ClassMethods
@@ -15,7 +15,15 @@ module JubiSingleton
     private
 
     def method_missing(method, *args, &block)
-      return instance.send(method, *args, &block)
+      if instance.respond_to?(method)
+        return instance.public_send(method, *args, &block)
+      end
+
+      return super
+    end
+
+    def respond_to_missing?(method, include_private = false)
+      return instance.respond_to?(method, include_private) || super
     end
   end
 end
