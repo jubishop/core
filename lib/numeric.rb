@@ -24,7 +24,7 @@ class Numeric
     parts = TIME_NAMES.filter_map { |amount, name|
       value = (remaining / amount).to_i
       remaining -= value * amount
-      pluralize(name, value) if value >= 1 && amount >= precision
+      pluralize(name, value) if value.positive? && amount >= precision
     }
     parts.push(pluralize(TIME_NAMES.fetch(precision), 0)) if parts.empty?
     return build_sentence(parts)
