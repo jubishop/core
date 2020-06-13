@@ -1,4 +1,4 @@
-class Numeric
+class Duration
   MILLISECONDS = 1
   SECONDS = MILLISECONDS * 1000
   MINUTES = SECONDS * 60
@@ -19,8 +19,54 @@ class Numeric
   }.freeze
   private_constant :TIME_NAMES
 
-  def duration(units: SECONDS, precision: SECONDS)
-    remaining = Rational(self * units)
+  attr_reader :milliseconds
+
+  def initialize(amount, units: SECONDS)
+    @milliseconds = Rational(amount * units)
+  end
+
+  def days
+    (@milliseconds / DAYS).to_i
+  end
+  alias d days
+
+  def hours
+    (@milliseconds / HOURS).to_i
+  end
+  alias h hours
+
+  def minutes
+    (@milliseconds / MINUTES).to_i
+  end
+  alias m minutes
+
+  def seconds
+    (@milliseconds / SECONDS).to_i
+  end
+  alias s seconds
+  alias ms milliseconds
+
+  def +(other)
+    unless other.class == Duration
+      raise ArgumentError, "#{other} is not a Duration"
+    end
+
+    return Duration.new(milliseconds + other.milliseconds, units: MILLISECONDS)
+  end
+
+  def -(other)
+    unless other.class == Duration
+      raise ArgumentError, "#{other} is not a Duration"
+    end
+    if other.milliseconds > milliseconds
+      raise RangeError, "#{other} is so large the result would be negative"
+    end
+
+    return Duration.new(milliseconds - other.milliseconds, units: MILLISECONDS)
+  end
+
+  def format(precision = SECONDS)
+    remaining = @milliseconds
     parts = TIME_NAMES.filter_map { |amount, name|
       value = (remaining / amount).to_i
       remaining -= value * amount
@@ -29,6 +75,7 @@ class Numeric
     parts.push(pluralize(TIME_NAMES.fetch(precision), 0)) if parts.empty?
     return build_sentence(parts)
   end
+  alias to_s format
 
   private
 
