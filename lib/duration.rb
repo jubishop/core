@@ -1,3 +1,5 @@
+require 'date'
+
 class Duration
   include Comparable
 
@@ -53,7 +55,7 @@ class Duration
   end
 
   def +(other)
-    unless other.class == Duration
+    unless other.is_a?(Duration)
       raise ArgumentError, "#{other} is not a Duration"
     end
 
@@ -99,4 +101,26 @@ class Duration
 
     return "#{parts[...-1].join(', ')} and #{parts.last}"
   end
+end
+
+module DateTimeDurationExtensions
+  def -(other)
+    if other.is_a?(Duration)
+      return self - Rational(other.milliseconds / Duration::DAYS)
+    end
+
+    super(other)
+  end
+
+  def +(other)
+    if other.is_a?(Duration)
+      return self + Rational(other.milliseconds / Duration::DAYS)
+    end
+
+    super(other)
+  end
+end
+
+class DateTime
+  prepend DateTimeDurationExtensions
 end
