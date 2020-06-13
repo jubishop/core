@@ -1,4 +1,6 @@
 class Duration
+  include Comparable
+
   MILLISECONDS = 1
   SECONDS = MILLISECONDS * 1000
   MINUTES = SECONDS * 60
@@ -26,25 +28,29 @@ class Duration
   end
 
   def days
-    (@milliseconds / DAYS).to_i
+    (milliseconds / DAYS).to_i
   end
   alias d days
 
   def hours
-    (@milliseconds / HOURS).to_i
+    (milliseconds / HOURS).to_i
   end
   alias h hours
 
   def minutes
-    (@milliseconds / MINUTES).to_i
+    (milliseconds / MINUTES).to_i
   end
   alias m minutes
 
   def seconds
-    (@milliseconds / SECONDS).to_i
+    (milliseconds / SECONDS).to_i
   end
   alias s seconds
   alias ms milliseconds
+
+  def <=>(other)
+    milliseconds <=> other.milliseconds
+  end
 
   def +(other)
     unless other.class == Duration
@@ -66,7 +72,7 @@ class Duration
   end
 
   def format(precision = SECONDS)
-    remaining = @milliseconds
+    remaining = milliseconds
     parts = TIME_NAMES.filter_map { |amount, name|
       value = (remaining / amount).to_i
       remaining -= value * amount
