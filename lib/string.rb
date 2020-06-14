@@ -1,17 +1,10 @@
 class String
-  include Enumerable
-
   VOWELS = %w[a e i o u y].freeze
   private_constant :VOWELS
 
-  def each
-    return to_enum(:each) unless block_given?
-
-    each_char { |char| yield char }
-  end
-
   def vowel?
-    all? { |char| VOWELS.include?(char) }
+    each_char { |char| return false unless VOWELS.include?(char) }
+    return true
   end
 
   def pluralize(amount = 2)
