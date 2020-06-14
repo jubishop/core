@@ -1,5 +1,8 @@
 require 'date'
 
+require_relative 'array'
+require_relative 'string'
+
 class Duration
   include Comparable
 
@@ -76,31 +79,18 @@ class Duration
   def format(precision = SECONDS)
     remaining = milliseconds
     parts = TIME_NAMES.filter_map { |amount, name|
+      next unless amount >= precision
+
       value = (remaining / amount).to_i
+      next unless value.positive?
+
       remaining -= value * amount
-      pluralize(name, value) if value.positive? && amount >= precision
+      "#{value} #{name.pluralize(value)}"
     }
-    parts.push(pluralize(TIME_NAMES.fetch(precision), 0)) if parts.empty?
-    return build_sentence(parts)
+    parts.push(TIME_NAMES.fetch(precision).pluralize(0)) if parts.empty?
+    return parts.sentence
   end
   alias to_s format
-
-  private
-
-  def pluralize(word, value)
-    int = value.to_i
-    return int == 1 ? "#{int} #{word}" : "#{int} #{word}s"
-  end
-
-  def build_sentence(parts)
-    raise ArgumentError, 'Sentence must have a part' if parts.empty?
-
-    return parts.first if parts.length == 1
-
-    return parts.join(' and ') if parts.length == 2
-
-    return "#{parts[...-1].join(', ')} and #{parts.last}"
-  end
 end
 
 module DateTimeDurationExtensions
