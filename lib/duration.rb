@@ -1,5 +1,3 @@
-require 'date'
-
 require_relative 'array'
 require_relative 'string'
 
@@ -25,6 +23,26 @@ class Duration
     MILLISECONDS => 'millisecond'
   }.freeze
   private_constant :TIME_NAMES
+
+  def self.of_milliseconds(milliseconds)
+    return Duration.new(milliseconds, Units: MILLISECONDS)
+  end
+
+  def self.of_seconds(seconds)
+    return Duration.new(seconds, units: SECONDS)
+  end
+
+  def self.of_minutes(minutes)
+    return Duration.new(minutes, units: MINUTES)
+  end
+
+  def self.of_hours(hours)
+    return Duration.new(hours, units: HOURS)
+  end
+
+  def self.of_days(days)
+    return Duration.new(days, units: DAYS)
+  end
 
   attr_reader :milliseconds
 
@@ -91,26 +109,4 @@ class Duration
     return parts.sentence
   end
   alias to_s format
-end
-
-module DateTimeDurationExtensions
-  def -(other)
-    if other.is_a?(Duration)
-      return self - Rational(other.milliseconds / Duration::DAYS)
-    end
-
-    super(other)
-  end
-
-  def +(other)
-    if other.is_a?(Duration)
-      return self + Rational(other.milliseconds / Duration::DAYS)
-    end
-
-    super(other)
-  end
-end
-
-class DateTime
-  prepend DateTimeDurationExtensions
 end
