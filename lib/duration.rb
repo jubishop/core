@@ -24,26 +24,6 @@ class Duration
   }.freeze
   private_constant :TIME_NAMES
 
-  def self.of_milliseconds(milliseconds)
-    return Duration.new(milliseconds, Units: MILLISECONDS)
-  end
-
-  def self.of_seconds(seconds)
-    return Duration.new(seconds, units: SECONDS)
-  end
-
-  def self.of_minutes(minutes)
-    return Duration.new(minutes, units: MINUTES)
-  end
-
-  def self.of_hours(hours)
-    return Duration.new(hours, units: HOURS)
-  end
-
-  def self.of_days(days)
-    return Duration.new(days, units: DAYS)
-  end
-
   attr_reader :milliseconds
 
   def initialize(amount, units: SECONDS)

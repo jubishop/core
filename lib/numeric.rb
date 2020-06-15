@@ -1,6 +1,6 @@
 require_relative 'duration'
 
-class Integer
+class Numeric
   def milliseconds
     return Duration.new(self, units: Duration::MILLISECONDS)
   end
