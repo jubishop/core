@@ -1,3 +1,5 @@
+require 'time'
+
 require_relative 'duration'
 
 module TimeDurationExtensions
