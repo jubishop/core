@@ -10,7 +10,13 @@ class Hash
   def deep_transform_keys!(&block)
     transform_keys!(&block)
     values.each { |value|
-      value.deep_transform_keys!(&block) if value.is_a?(Hash)
+      if value.is_a?(Hash)
+        value.deep_transform_keys!(&block)
+      elsif value.is_a?(Enumerable)
+        value.each { |element|
+          element.deep_transform_keys!(&block) if element.is_a?(Hash)
+        }
+      end
     }
   end
 
