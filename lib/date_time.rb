@@ -1,3 +1,5 @@
+require 'date'
+
 require_relative 'duration'
 
 module DateTimeDurationExtensions
