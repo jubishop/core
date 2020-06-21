@@ -10,7 +10,6 @@ class Hash
   end
 
   def symbolize_keys!
-    transform_keys!(&:to_sym)
-    return self
+    return transform_keys!(&:to_sym)
   end
 end
