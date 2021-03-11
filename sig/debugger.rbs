@@ -1,1 +1,1 @@
-def debugger: (?Binding) -> void
+def debugger: (?Binding binding) -> void
