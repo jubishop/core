@@ -5,10 +5,10 @@ module JubiSingleton
 
   module ClassMethods
     @instance = false
-    def instance(*args, &block)
+    def instance(...)
       return @instance if @instance
 
-      @instance = new(*args, &block)
+      @instance = new(...)
       return @instance
     end
 
