@@ -7,7 +7,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["jubishop@gmail.com"]
   spec.homepage      = "https://github.com/jubishop/core"
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.7.1")
+  spec.required_ruby_version = Gem::Requirement.new(">= 3")
   spec.metadata["source_code_uri"] = "https://github.com/jubishop/core"
-  spec.files         = Dir["lib/**/*.rb"]
+  spec.files         = Dir["lib/**/*.rb"] + Dir["def/**/*.rbs"]
+  spec.add_runtime_dependency 'rbs'
 end
