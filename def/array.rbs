@@ -1,3 +1,0 @@
-class Array
-  def sentence: (joiner:String) { (String) -> String } -> String
-end
