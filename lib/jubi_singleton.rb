@@ -22,8 +22,8 @@ module JubiSingleton
       return super
     end
 
-    def respond_to_missing?(method, include_all)
-      return instance.respond_to?(method, include_all) || super
+    def respond_to_missing?(method, include_private = false)
+      return instance.respond_to?(method, include_private) || super
     end
   end
 end

@@ -6,12 +6,10 @@ def debugger(binding = TOPLEVEL_BINDING)
       break
     end
 
-    # rubocop:disable Security/Eval, Lint/RescueException
     begin
-      puts JSON.pretty_generate(eval(input, binding))
-    rescue Exception => e
+      puts eval(input, binding) # rubocop:disable Security/Eval
+    rescue Exception => e # rubocop:disable Lint/RescueException
       puts "#{e.class}: #{e}"
     end
-    # rubocop:enable Security/Eval, Lint/RescueException
   end
 end
