@@ -1,3 +1,0 @@
-class Array
-  def sentence: (?::String joiner) { () -> untyped } -> (::String)
-end
