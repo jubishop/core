@@ -10,7 +10,11 @@ class String
   def pluralize(amount = 2)
     return self if amount == 1 || empty?
 
-    return "#{self}s" if length == 1 || self[-1] != 'y' || self[-2].vowel?
+    return "#{self}s" if length == 1
+
+    last_char = self[-1] || ''
+    second_to_last_char = self[-2] || ''
+    return "#{self}s" if last_char != 'y' || second_to_last_char.vowel?
 
     return "#{self[...-1]}ies"
   end
