@@ -9,5 +9,5 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.7.1")
   spec.metadata["source_code_uri"] = "https://github.com/jubishop/core"
-  spec.files         = Dir["lib/**/*.rb"]
+  spec.files         = Dir["lib/**/*.rb"] + Dir["sig/**/*.rb"]
 end
