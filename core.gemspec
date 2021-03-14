@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3")
   spec.metadata["source_code_uri"] = "https://github.com/jubishop/core"
-  spec.files         = Dir["lib/**/*.rb"] + Dir["sig/**/*.rb"] + ["Steepfile"]
+  spec.files         = Dir["lib/**/*.rb"] + Dir["sig/**/*.rb"]
   spec.require_paths = ["lib"]
   spec.metadata      = {
     "steep_types" => "sig"
