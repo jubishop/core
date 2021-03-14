@@ -1,6 +1,13 @@
 module Enumerable
   def deep_transform_keys!(&block)
-    each { |elem| elem.deep_transform_keys!(&block) if elem.is_a?(Enumerable) }
+    # @type self: Enumerable[Object]
+    each { |elem|
+      # @type var elem: untyped
+      if elem.is_a?(Enumerable)
+        # @type var elem: Enumerable[Object]
+        elem.deep_transform_keys!(&block)
+      end
+    }
     return self
   end
 

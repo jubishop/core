@@ -6,10 +6,13 @@ class Hash
   end
 
   def symbolize_keys
+    # @type self: Hash[String | Symbol, untyped]
     return transform_keys(&:to_sym)
   end
 
   def symbolize_keys!
-    return transform_keys!(&:to_sym)
+    # @type self: Hash[String | Symbol, untyped]
+    transform_keys!(&:to_sym)
+    # @type self: Hash[Symbol, untyped]
   end
 end
