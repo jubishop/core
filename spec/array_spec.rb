@@ -67,7 +67,7 @@ RSpec.describe(Array, '#sentence') {
     }
 
     it('uses a joiner and map block if given') {
-      expect(%w[one two yo].sentence('or', &:length)).to(eq('3, 3 or 2'))
+      expect(%w[one two yo].sentence('or', &:upcase)).to(eq('ONE, TWO or YO'))
       expect([12, -23, 34].sentence('nor', &:abs)).to(eq('12, 23 nor 34'))
     }
   }
