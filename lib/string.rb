@@ -16,7 +16,7 @@ class String
 
     return "#{self}s" if length == 1
 
-    return PLURAL_MAP.fetch(self.to_sym) if PLURAL_MAP.key?(self.to_sym)
+    return PLURAL_MAP.fetch(to_sym) if PLURAL_MAP.key?(to_sym)
 
     last_char = self[-1] || ''
     second_to_last_char = self[-2] || ''
