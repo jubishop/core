@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rbs'
 gem 'rspec'
 gem 'steep'
 
