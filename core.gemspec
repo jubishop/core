@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "core"
-  spec.version       = "1.0"
+  spec.version       = "1.1"
   spec.date          = "2020-05-23"
   spec.summary       = %q{Core reusable Ruby libs.}
   spec.authors       = ["Justin Bishop"]

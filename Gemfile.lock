@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    core (1.0)
+    core (1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -29,11 +29,10 @@ GEM
     parser (3.0.0.0)
       ast (~> 2.4.1)
     rainbow (3.0.0)
-    rake (13.0.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rbs (1.1.0)
+    rbs (1.1.1)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -65,7 +64,6 @@ PLATFORMS
 
 DEPENDENCIES
   core!
-  rake
   rspec
   steep
 
