@@ -1,6 +1,4 @@
 class String
-  VOWELS: Array[String]
-
   def vowel?: () -> (bool)
 
   def pluralize: (?Integer amount) -> (String)

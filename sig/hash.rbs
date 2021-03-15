@@ -1,5 +1,5 @@
 class Hash[unchecked out K, unchecked out V] < Object
-  def deep_transform_keys!: () { (untyped) -> untyped } -> Hash[K, V]
+  def deep_transform_keys!: () { (Object) -> Object } -> Hash[K, V]
 
   def symbolize_keys: () -> Hash[Symbol, V]
 

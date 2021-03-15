@@ -1,5 +1,5 @@
 module Enumerable[unchecked out Elem]: _Each[Elem]
-  def deep_transform_keys!: () { (untyped) -> untyped } -> Enumerable[Object]
+  def deep_transform_keys!: () { (Object) -> Object } -> Enumerable[Object]
 
   def deep_symbolize_keys!: () -> Enumerable[Object]
 end

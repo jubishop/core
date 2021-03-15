@@ -1,6 +1,5 @@
 class Array
   def sentence(joiner = 'and', &map_block)
-    # @type self: Array[unchecked out Elem]
     list = map_block ? map(&map_block) : self
 
     return list.first.to_s if list.length <= 1
