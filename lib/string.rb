@@ -8,7 +8,7 @@ class String
   private_constant :PLURAL_MAP
 
   def vowel?
-    return length == 1 && VOWELS.include?(self)
+    return length == 1 && VOWELS.include?(downcase)
   end
 
   def pluralize(amount = 2)
