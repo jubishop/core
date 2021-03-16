@@ -27,6 +27,7 @@ def bump_version
   }
   File.write(file, lines.join)
   FileUtils.touch('.gt')
+  return true
 end
 
 def build_gem
