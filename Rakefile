@@ -6,9 +6,8 @@ RSpec::Core::RakeTask.new(:spec) { |t|
   t.pattern = Dir.glob('spec/**/*_spec.rb')
 }
 
-task(:build) {
-  files = Rake::FileList.new('*.gemspec')
-  files.each { |file|
+task(:bump_version) {
+  Rake::FileList.new('*.gemspec').each { |file|
     lines = File.readlines(file)
     lines.map! { |line|
       if line.strip.start_with?('spec.version')
@@ -20,10 +19,17 @@ task(:build) {
       end
     }
     File.write(file, lines.join)
+  }
+}
 
-    gem_name = file.split('.').first
-    puts main_version
-    #sh "gem build #{file}"
+task(install: :bump_version) {
+  Rake::FileList.new('*.gemspec').each { |file|
+    sh "gem build #{file}"
+  }
+
+  Rake::FileList.new('*.gem').each { |file|
+    sh "gem install #{file}"
+    sh "rm #{file}"
   }
 }
 
