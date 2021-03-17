@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'core'
-  spec.version       = '1.4'
+  spec.version       = '1.6'
   spec.summary       = 'Core reusable Ruby libs.'
   spec.authors       = ['Justin Bishop']
   spec.email         = ['jubishop@gmail.com']
