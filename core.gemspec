@@ -10,6 +10,8 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = 'https://github.com/jubishop/core'
   spec.files         = Dir['lib/**/*.rb'] + Dir['sig/**/*.rb']
   spec.require_paths = ['lib']
+  spec.bindir        = 'bin'
+  spec.executables   = []
   spec.metadata      = {
     'steep_types' => 'sig'
   }
