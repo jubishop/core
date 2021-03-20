@@ -1,7 +1,5 @@
-require_relative 'array'
-require_relative 'debugger'
-require_relative 'enumerable'
-require_relative 'hash'
-require_relative 'jubi_singleton'
-require_relative 'proc'
-require_relative 'string'
+this_file = File.basename(__FILE__, '.rb')
+Dir.glob("#{File.dirname(__FILE__)}/*").each { |file|
+  basename = File.basename(file, '.rb')
+  require basename unless basename == this_file
+}

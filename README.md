@@ -4,19 +4,40 @@ My core ruby libs.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
 ```ruby
 gem 'core', github: 'jubishop/core'
 ```
 
-And then execute:
-
-```sh
-$ bundle install
-```
-
 ## Usage
+
+### String
+
+- `String#pluralize`
+- `String#vowel?`
+
+### Array
+
+- `Array#sentence(joiner, &map)`
+
+### Hash
+
+- `Hash#deep_transform_keys!(&block)`
+- `Hash#symbolize_keys`
+- `Hash#symbolize_keys!`
+
+### Proc
+
+- `Proc:#run`
+
+### Jubi_Singleton
+
+- `include JubiSingleton`
+  - Converts all functions into singletons.
+  - Calls `initialize` before first function call.
+
+### debugger
+
+`debugger(binding)` - Interactive repl bound to current line of code.
 
 ## License
 
