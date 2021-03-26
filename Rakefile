@@ -8,6 +8,6 @@ RSpec::Core::RakeTask.new(:spec) { |t|
   t.pattern = Dir.glob('spec/**/*_spec.rb')
 }
 
-RakeGem::Task.new(:install)
+RakeGem::Task.new
 
 task default: %w[rubocop spec]

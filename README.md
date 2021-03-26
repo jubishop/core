@@ -1,11 +1,19 @@
 # Core
 
-My core ruby libs.
+Core reusable Ruby libs.
 
 ## Installation
 
+### Global installation
+
+```zsh
+gem install core --source https://www.jubigems.org/
+```
+
+### In a Gemfile
+
 ```ruby
-gem 'core', github: 'jubishop/core'
+gem 'core', source: 'https://www.jubigems.org/'
 ```
 
 ## Usage
