@@ -37,7 +37,7 @@ gem 'core', source: 'https://www.jubigems.org/'
 
 ### Proc
 
-- `Proc:#run`
+- `Proc#run`
 
 ### Jubi_Singleton
 
