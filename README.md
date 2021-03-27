@@ -1,5 +1,7 @@
 # Core
 
+[![Actions Status](https://github.com/jubishop/core/workflows/RSpec/badge.svg)](https://github.com/jubishop/core/actions)
+
 Core reusable Ruby libs.
 
 ## Installation

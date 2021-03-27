@@ -51,7 +51,7 @@ RSpec.describe(String, '#vowel?') {
   context('with more than one character') {
     it('always returns false') {
       %w[poop aeuoi AEIOUY AE sNth Yy Yo Nope].each { |string|
-        expect(string.vowel?).to(be(true))
+        expect(string.vowel?).to(be(false))
       }
     }
   }
