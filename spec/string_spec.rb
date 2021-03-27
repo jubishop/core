@@ -50,7 +50,7 @@ RSpec.describe(String, '#pluralize') {
 RSpec.describe(String, '#vowel?') {
   context('with more than one character') {
     it('always returns false') {
-      %w[poop aeuoi AEIOUY AE sNth Yy Yo Nope yes ok more].each { |string|
+      %w[poop aeuoi AEIOUY AE sNth Yy Yo Nope].each { |string|
         expect(string.vowel?).to(be(false))
       }
     }
