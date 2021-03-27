@@ -1,6 +1,6 @@
 # Core
 
-[![Actions Status](https://github.com/jubishop/core/workflows/RSpec/badge.svg)](https://github.com/jubishop/core/actions)
+[![RSpec Status](https://github.com/jubishop/core/workflows/RSpec/badge.svg)](https://github.com/jubishop/core/actions)  [![Rubocop Status](https://github.com/jubishop/core/workflows/Rubocop/badge.svg)](https://github.com/jubishop/core/actions)
 
 Core reusable Ruby libs.
 
