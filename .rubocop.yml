@@ -104,6 +104,7 @@ Style/InlineComment:
 Style/MethodCallWithArgsParentheses:
   IgnoredMethods:
     - gem
+    - include
     - puts
     - raise
     - require
