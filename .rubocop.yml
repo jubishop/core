@@ -103,6 +103,7 @@ Style/InlineComment:
 
 Style/MethodCallWithArgsParentheses:
   IgnoredMethods:
+    - alias_method
     - gem
     - include
     - puts
