@@ -9,7 +9,10 @@ gem 'rubocop-rake'
 gem 'rubocop-rspec'
 gem 'steep'
 
-gem 'rakegem', github: 'jubishop/rakegem'
+source 'https://www.jubigems.org' do
+  # defaults
+  gem 'rakegem'
+end
 
 # Specify your gem's dependencies in core.gemspec
 gemspec
