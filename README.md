@@ -22,7 +22,6 @@ gem 'core', source: 'https://www.jubigems.org/'
 
 ### String
 
-- `String#pluralize`
 - `String#vowel?`
 
 ### Array

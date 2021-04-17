@@ -3,6 +3,4 @@ class String
   PLURAL_MAP: Hash[Symbol, String]
 
   def vowel?: () -> (bool)
-
-  def pluralize: (?Integer amount) -> (String)
 end
