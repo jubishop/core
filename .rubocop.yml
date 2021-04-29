@@ -74,6 +74,10 @@ Metrics/PerceivedComplexity:
 Naming/FileName:
   Enabled: false
 
+Performance/ChainArrayAllocation:
+  Exclude:
+    - 'spec/**'
+
 Style/BlockDelimiters:
   EnforcedStyle: always_braces
   Exclude:
