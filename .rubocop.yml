@@ -76,7 +76,7 @@ Naming/FileName:
 
 Performance/ChainArrayAllocation:
   Exclude:
-    - 'spec/**'
+    - 'spec/**/*.rb'
 
 Style/BlockDelimiters:
   EnforcedStyle: always_braces
