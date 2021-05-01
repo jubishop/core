@@ -34,6 +34,10 @@ gem 'core', source: 'https://www.jubigems.org/'
 
 - `Proc#run`
 
+## Spec
+
+You can see examples of all of these in [`spec`](https://github.com/jubishop/core/tree/master/spec)
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
