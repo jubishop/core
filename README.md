@@ -34,10 +34,6 @@ gem 'core', source: 'https://www.jubigems.org/'
 
 - `Proc#run`
 
-### debugger
-
-`debugger(binding)` - Interactive repl bound to current line of code.
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
