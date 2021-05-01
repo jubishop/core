@@ -34,12 +34,6 @@ gem 'core', source: 'https://www.jubigems.org/'
 
 - `Proc#run`
 
-### Jubi_Singleton
-
-- `include JubiSingleton`
-  - Converts all functions into singletons.
-  - Calls `initialize` before first function call.
-
 ### debugger
 
 `debugger(binding)` - Interactive repl bound to current line of code.
