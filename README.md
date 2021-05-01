@@ -20,10 +20,6 @@ gem 'core', source: 'https://www.jubigems.org/'
 
 ## Usage
 
-### String
-
-- `String#vowel?`
-
 ### Array
 
 - `Array#sentence(joiner, &map)`
