@@ -112,6 +112,9 @@ Style/FrozenStringLiteralComment:
 Style/InlineComment:
   Enabled: false
 
+Style/Lambda:
+  EnforcedStyle: literal
+
 Style/MethodCallWithArgsParentheses:
   IgnoredMethods:
     - alias_method
