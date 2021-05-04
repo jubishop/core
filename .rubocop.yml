@@ -78,6 +78,9 @@ Metrics/PerceivedComplexity:
 Naming/FileName:
   Enabled: false
 
+Naming/RescuedExceptionsVariableName:
+  PreferredName: error
+
 Performance/ChainArrayAllocation:
   Exclude:
     - 'spec/**/*.rb'
