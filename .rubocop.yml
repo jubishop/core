@@ -38,6 +38,9 @@ Layout/MultilineMethodArgumentLineBreaks:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: same_line
 
+Layout/SingleLineBlockChain:
+  Enabled: false
+
 Lint/ConstantDefinitionInBlock:
   Exclude:
       - 'spec/**/*.rb'
