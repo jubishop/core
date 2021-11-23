@@ -17,6 +17,9 @@ Layout/ArgumentAlignment:
   EnforcedStyle: with_first_argument
   IndentationWidth: 4
 
+Layout/EmptyLineAfterMultilineCondition:
+  Enabled: false
+
 Layout/FirstArgumentIndentation:
   IndentationWidth: 4
 
