@@ -60,9 +60,6 @@ Lint/Debugger:
 Lint/NumberConversion:
   Enabled: false
 
-Lint/SafeNavigationWithEmpty:
-  Enabled: false
-
 Metrics/AbcSize:
   Enabled: false
 
