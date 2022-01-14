@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.executables   = []
   spec.metadata      = {
     'source_code_uri' => 'https://github.com/jubishop/core',
-    'steep_types' => 'sig'
+    'steep_types' => 'sig',
+    'rubygems_mfa_required' => 'true'
   }
 end
