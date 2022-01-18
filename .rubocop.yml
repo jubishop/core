@@ -87,6 +87,9 @@ Metrics/PerceivedComplexity:
 Naming/FileName:
   Enabled: false
 
+Naming/InclusiveLanguage:
+  Enabled: false
+
 Naming/RescuedExceptionsVariableName:
   PreferredName: error
 
