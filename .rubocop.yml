@@ -123,6 +123,9 @@ RSpec/MultipleMemoizedHelpers:
 RSpec/NestedGroups:
   Enabled: false
 
+RSpec/VariableName:
+  Enabled: false
+
 Style/BlockDelimiters:
   EnforcedStyle: always_braces
   Exclude:
