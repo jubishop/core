@@ -105,7 +105,13 @@ RSpec/AlignLeftLetBrace:
 RSpec/AlignRightLetBrace:
   Enabled: false
 
+RSpec/AnyInstance:
+  Enabled: false
+
 RSpec/BeforeAfterAll:
+  Enabled: false
+
+RSpec/Capybara/SpecificMatcher:
   Enabled: false
 
 RSpec/ContextMethod:
@@ -123,13 +129,22 @@ RSpec/DescribedClass:
 RSpec/EmptyExampleGroup:
   Enabled: false
 
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: false
+
 RSpec/ExampleLength:
   Enabled: false
 
 RSpec/FilePath:
   Enabled: false
 
+RSpec/HookArgument:
+  Enabled: false
+
 RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/LeakyConstantDeclaration:
   Enabled: false
 
 RSpec/MultipleExpectations:
@@ -142,6 +157,9 @@ RSpec/NestedGroups:
   Enabled: false
 
 RSpec/NotToNot:
+  Enabled: false
+
+RSpec/ScatteredLet:
   Enabled: false
 
 RSpec/SharedExamples:
