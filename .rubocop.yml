@@ -15,6 +15,9 @@ Bundler/GemComment:
 Bundler/GemVersion:
   Enabled: false
 
+Gemspec/DependencyVersion:
+  Enabled: false
+
 Layout/ArgumentAlignment:
   EnforcedStyle: with_first_argument
   IndentationWidth: 4
