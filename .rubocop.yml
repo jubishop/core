@@ -99,10 +99,16 @@ Performance/ChainArrayAllocation:
   Exclude:
     - 'spec/**/*.rb'
 
+RSpec/BeforeAfterAll:
+  Enabled: false
+
 RSpec/ContextWording:
   Enabled: false
 
 RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/DescribedClass:
   Enabled: false
 
 RSpec/EmptyExampleGroup:
@@ -112,6 +118,9 @@ RSpec/ExampleLength:
   Enabled: false
 
 RSpec/FilePath:
+  Enabled: false
+
+RSpec/InstanceVariable:
   Enabled: false
 
 RSpec/MultipleExpectations:
