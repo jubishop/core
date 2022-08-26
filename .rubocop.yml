@@ -131,7 +131,7 @@ Style/Lambda:
   EnforcedStyle: literal
 
 Style/MethodCallWithArgsParentheses:
-  IgnoredMethods:
+  AllowedMethods:
     - alias_method
     - gem
     - include
