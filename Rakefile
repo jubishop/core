@@ -10,4 +10,4 @@ RSpec::Core::RakeTask.new(:spec) { |t|
 
 RakeGem::Task.new
 
-task default: %w[rubocop:auto_correct spec]
+task default: %w[rubocop:autocorrect spec]

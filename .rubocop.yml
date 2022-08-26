@@ -1,5 +1,7 @@
 require:
   - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
 
 AllCops:
   EnabledByDefault: true
@@ -96,6 +98,15 @@ Naming/RescuedExceptionsVariableName:
 Performance/ChainArrayAllocation:
   Exclude:
     - 'spec/**/*.rb'
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
 
 Style/BlockDelimiters:
   EnforcedStyle: always_braces
