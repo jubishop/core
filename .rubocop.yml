@@ -99,6 +99,9 @@ Performance/ChainArrayAllocation:
   Exclude:
     - 'spec/**/*.rb'
 
+RSpec/AlignRightLetBrace:
+  Enabled: false
+
 RSpec/BeforeAfterAll:
   Enabled: false
 
@@ -130,6 +133,12 @@ RSpec/MultipleMemoizedHelpers:
   Enabled: false
 
 RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/NotToNot:
+  Enabled: false
+
+RSpec/SharedExamples:
   Enabled: false
 
 RSpec/VariableName:
