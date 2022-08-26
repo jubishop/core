@@ -9,7 +9,7 @@ gem 'rubocop-rake'
 gem 'rubocop-rspec'
 gem 'steep'
 
-source 'https://www.jubigems.org' do
+source 'http://www.jubigems.org' do
   # defaults
   gem 'rakegem'
 end
