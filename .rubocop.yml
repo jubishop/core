@@ -7,7 +7,7 @@ AllCops:
   EnabledByDefault: true
   Exclude:
     - '**/test.rb'
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.0.3
 
 Bundler/GemComment:
   Enabled: false
