@@ -159,6 +159,9 @@ RSpec/MultipleMemoizedHelpers:
 RSpec/NestedGroups:
   Enabled: false
 
+RSpec/NoExpectationExample:
+  Enabled: false
+
 RSpec/NotToNot:
   Enabled: false
 
